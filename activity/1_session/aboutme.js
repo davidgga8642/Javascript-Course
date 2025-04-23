@@ -1,14 +1,14 @@
-let NombreCreador;
+export let NombreCreador;
 NombreCompleto="David Gómez García-Arias"
 console.log(NombreCompleto);
 
-let profesion="Tecnico de campo"
+export let profesion="Tecnico de campo"
 console.log(profesion)
 
-let puestoDeseado;
+export let puestoDeseado;
 puestoDeseado="Programador"
 console.log(puestoDeseado);
 
 
-const presentacion = `Hola, me llamo ${nombreCompleto} y me dedico a ${profesion}. Estoy cursando este Máster porque me gustaría trabajar en ${puestoDeseado}.`;
+export const presentacion = `Hola, me llamo ${nombreCompleto} y me dedico a ${profesion}. Estoy cursando este Máster porque me gustaría trabajar en ${puestoDeseado}.`;
 console.log(presentacion);
