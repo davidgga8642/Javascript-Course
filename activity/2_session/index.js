@@ -103,6 +103,37 @@ login.login();
 let logbad = new Login("pepe", "bad");
 logbad.login(); 
 // Ejercicio 5
+// Clase Login (como en el ejercicio anterior)
+class Login {
+  constructor(username, password) {
+    this.username = username;
+    this.password = password;
+  }
+
+  login() {
+    if (this.username === "admin" && this.password === "passwd") {
+      alert("User logged in");
+    } else {
+      alert("User or passwd incorrect");
+    }
+  }
+}
+
+// Obtener los botones por ID
+const btnSuccess = document.getElementById("loginSuccess");
+const btnFailure = document.getElementById("loginFailure");
+
+// Listener para botón de login correcto
+btnSuccess.addEventListener("click", () => {
+  const login = new Login("admin", "passwd");
+  login.login();
+});
+
+// Listener para botón de login incorrecto
+btnFailure.addEventListener("click", () => {
+  const login = new Login("user", "1234");
+  login.login();
+});
 
 // Ejercicio 6
 
