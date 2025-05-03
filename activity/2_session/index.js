@@ -136,7 +136,6 @@ btnFailure.addEventListener("click", () => {
 });
 
 // Ejercicio 6
-
 let loginWitUsername = (username, password) => {
     return new Promise(function (resolve, rejected) {
       setTimeout(() => {
