@@ -148,3 +148,22 @@ let loginWitUsername = (username, password) => {
       }, 200);
     });
 };
+const btnSuccessAsync = document.getElementById("loginSuccessAsync");
+const btnFailureAsync = document.getElementById("loginFailureAsync");
+btnSuccessAsync.addEventListener("click", async () => {
+  try {
+    const result = await loginWithUsername("admin", "passwd");
+    alert(result);
+  } catch (error) {
+    alert(error.message);
+  }
+});
+
+btnFailureAsync.addEventListener("click", async () => {
+  try {
+    const result = await loginWithUsername("user", "wrong");
+    alert(result);
+  } catch (error) {
+    alert(error.message);
+  }
+});
